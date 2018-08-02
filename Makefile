@@ -15,7 +15,8 @@ NAME		=	fractol
 SRC_NAME	=	main.c \
 				key_holder.c \
 				init_drawing.c \
-				ft_mandelbrot.c
+				ft_mandelbrot.c \
+				init_params.c
 
 OBJ_NAME	=	$(SRC:.c=.o)
 SRC_PATH	=	./src

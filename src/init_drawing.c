@@ -25,6 +25,7 @@ void	init_drawing(t_params *params)
 	params->mlx_ptr = mlx_init();
 	params->win_ptr = mlx_new_window(params->mlx_ptr,
 			WIDTH, HIGHT, "smortier_fractol");
+	init_params(params);
 	print_fractal(params);
 	mlx_hook(params->win_ptr, 2, 0, key_holder, params);
 	//ici on peut mettre les hook souris
