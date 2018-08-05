@@ -1,9 +1,14 @@
-//HEADER
-//HEADER
-//HEADER
-//HEADER
-//HEADER
-//HEADER
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_params.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smortier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/05 15:56:57 by smortier          #+#    #+#             */
+/*   Updated: 2018/08/05 15:57:00 by smortier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "fractol.h"
 
@@ -24,13 +29,14 @@ t_mand	init_mand(void)
 	tmp.image_y = HIGHT;
 	tmp.zoom_x = tmp.image_x / (tmp.x2 - tmp.x1);
 	tmp.zoom_y = tmp.image_y / (tmp.y2 - tmp.y1);
-	tmp.iterations = 50;
+	tmp.iter = 50;
 	return (tmp);
 }
 
-void    init_params(t_params *params)
+void	init_params(t_params *params)
 {
-    params->mand = init_mand();
-    params->x = 0;
-    params->y = 0;
+	params->mand = init_mand();
+	params->x = 0;
+	params->y = 0;
+	params->zoom = 1;
 }

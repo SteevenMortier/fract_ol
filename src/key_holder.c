@@ -22,7 +22,7 @@ int		key_holder(int key, t_params *params)
 	{
 		params->x = 0;
 		params->y = 0;
-		mlx_destroy_image(params->mlx_ptr, params->img.img_ptr);
+		// mlx_destroy_image(params->mlx_ptr, params->img.img_ptr);
 		mlx_clear_window(params->mlx_ptr, params->win_ptr);
 		print_fractal(params);
 	}

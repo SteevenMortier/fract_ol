@@ -31,7 +31,7 @@ int		main(int ac, char **av)
 	if (ac == 1)
 	{
 		ft_printf("Usage: %s", "Put some options\n");
-		exit (0);
+		exit(0);
 	}
 	choose_fractale(av, &params);
 	ft_printf("choosed fractal = [%d]\n", params.fractal);

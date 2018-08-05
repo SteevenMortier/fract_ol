@@ -28,6 +28,7 @@ void	init_drawing(t_params *params)
 	init_params(params);
 	print_fractal(params);
 	mlx_hook(params->win_ptr, 2, 0, key_holder, params);
+	mlx_mouse_hook(params->win_ptr, mouse_holder, params);
 	//ici on peut mettre les hook souris
 	mlx_loop(params->mlx_ptr);
 }

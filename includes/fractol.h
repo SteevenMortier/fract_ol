@@ -27,6 +27,10 @@
 
 # define Julia 2
 
+# define ZOOM_MOUSE 4
+
+# define DEZOOM_MOUSE 5
+
 typedef struct			s_img
 {
 	void		*img_ptr;
@@ -47,11 +51,12 @@ typedef struct			s_mand
 	float	x2;
 	float	y1;
 	float	y2;
-	float	zoom_x;
 	float	zoom_y;
+	float	zoom_x;
 	float	image_x;
 	float	image_y;
-	int		iterations;
+	float 	h;
+	int		iter;
 }						t_mand;
 
 
@@ -62,11 +67,14 @@ typedef struct			s_params
 	int 				fractal;
 	int					x;
 	int					y;
+	int					zoom;
 	t_mand				mand;
 	t_img				img;
 }						t_params;
 
 int		key_holder(int key, t_params *params);
+
+int		mouse_holder(int key, int x, int y, t_params *params);
 
 void	init_drawing(t_params *params);
 
@@ -75,5 +83,13 @@ void	print_fractal(t_params *params);
 void	ft_mandelbrot(t_params *params);
 
 void    init_params(t_params *params);
+
+//Thread mand
+void	*thread_mand_1(void *parameter);
+void	*thread_mand_2(void *parameter);
+void	*thread_mand_3(void *parameter);
+void	*thread_mand_4(void *parameter);
+
+void	*calc_mandel(t_params *params, int y, int x);
 
 #endif

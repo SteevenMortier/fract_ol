@@ -16,7 +16,9 @@ SRC_NAME	=	main.c \
 				key_holder.c \
 				init_drawing.c \
 				ft_mandelbrot.c \
-				init_params.c
+				init_params.c \
+				thread_mandel.c \
+				mouse_holder.c \
 
 OBJ_NAME	=	$(SRC:.c=.o)
 SRC_PATH	=	./src
