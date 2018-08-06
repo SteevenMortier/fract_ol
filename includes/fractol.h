@@ -20,16 +20,19 @@
 
 #include <pthread.h>
 
-# define WIDTH 1400
-# define HIGHT 1200
+#include <math.h>
+
+# define WIDTH 800
+# define HIGHT 600
 
 # define Mandelbrot 1
 
 # define Julia 2
 
 # define ZOOM_MOUSE 4
-
 # define DEZOOM_MOUSE 5
+# define PLUS 24
+# define LESS 27
 
 typedef struct			s_img
 {
@@ -67,7 +70,7 @@ typedef struct			s_params
 	int 				fractal;
 	int					x;
 	int					y;
-	int					zoom;
+	float					zoom;
 	t_mand				mand;
 	t_img				img;
 }						t_params;

@@ -31,8 +31,9 @@ void	change_mand2(t_mand *mand, float tmp)
 
 void	store_img(t_params *params, int x, int y, t_mand mand)
 {
-	if (mand.i == mand.iter)
-		params->img.data[y * WIDTH + x] = 0xFF0000;
+	if (mand.i >= mand.iter)
+	// (void)mand;
+		params->img.data[y * WIDTH + x] = mand.i ;
 	else
 		params->img.data[y * WIDTH + x] = mand.i * 255 / mand.iter;
 }
@@ -43,7 +44,7 @@ void	*calc_mandel(t_params *params, int y, int x)
 	float	tmp;
 	int		limit;
 
-	limit = y + 300;
+	limit = y + HIGHT / 4;
 	mand = params->mand;
 	tmp = 0;
 	while (y < limit)

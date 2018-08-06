@@ -26,7 +26,7 @@ void	*thread_mand_2(void *parameter)
 	t_params *params;
 
 	params = (t_params *)parameter;
-	calc_mandel(params, 300, 0);
+	calc_mandel(params, 150, 0);
 	return (0);
 }
 
@@ -35,7 +35,7 @@ void	*thread_mand_3(void *parameter)
 	t_params *params;
 
 	params = (t_params *)parameter;
-	calc_mandel(params, 600, 0);
+	calc_mandel(params, 300, 0);
 	return (0);
 }
 
@@ -44,6 +44,6 @@ void	*thread_mand_4(void *parameter)
 	t_params *params;
 
 	params = (t_params *)parameter;
-	calc_mandel(params, 900, 0);
+	calc_mandel(params, 450, 0);
 	return (0);
 }
