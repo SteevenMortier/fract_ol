@@ -31,11 +31,15 @@ void	change_mand2(t_mand *mand, float tmp)
 
 void	store_img(t_params *params, int x, int y, t_mand mand)
 {
+	int	iterations;
+
+	iterations = mand.i % 255;
 	if (mand.i >= mand.iter)
 	// (void)mand;
-		params->img.data[y * WIDTH + x] = mand.i ;
+		params->img.data[y * WIDTH + x] = get_color(iterations * 5, 255, 255);
 	else
-		params->img.data[y * WIDTH + x] = mand.i * 255 / mand.iter;
+		params->img.data[y * WIDTH + x] = get_color(iterations * 10, 0, 0);
+	//params->img.data[y * WIDTH + x] = get_color(0, 255, 0); // a enlever
 }
 
 void	*calc_mandel(t_params *params, int y, int x)

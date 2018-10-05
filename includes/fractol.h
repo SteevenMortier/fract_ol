@@ -93,6 +93,7 @@ void	*thread_mand_2(void *parameter);
 void	*thread_mand_3(void *parameter);
 void	*thread_mand_4(void *parameter);
 
+int	get_color(int red, int green, int blue);
 void	*calc_mandel(t_params *params, int y, int x);
 
 #endif

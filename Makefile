@@ -19,6 +19,7 @@ SRC_NAME	=	main.c \
 				init_params.c \
 				thread_mandel.c \
 				mouse_holder.c \
+				get_color.c
 
 OBJ_NAME	=	$(SRC:.c=.o)
 SRC_PATH	=	./src
