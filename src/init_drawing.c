@@ -16,6 +16,8 @@ void	print_fractal(t_params *params)
 {
 	if (params->fractal == 1)
 		ft_mandelbrot(params);
+	else if (params->fractal == 2)
+		ft_julia(params);
 	else
 		exit(0);
 }

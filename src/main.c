@@ -15,7 +15,9 @@
 void	choose_fractale(char **av, t_params *params)
 {
 	if (!ft_strcmp(av[1], "Mandelbrot") || !ft_strcmp(av[1], "mandelbrot"))
-		params->fractal = Mandelbrot;
+		params->fractal = MANDELBROT;
+	else if (!ft_strcmp(av[1], "Julia") || !ft_strcmp(av[1], "julia"))
+		params->fractal = JULIA;
 	else
 	{
 		ft_printf("Usage: ./fractol [arg]\n");

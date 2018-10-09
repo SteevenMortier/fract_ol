@@ -33,7 +33,7 @@ void	store_img(t_params *params, int x, int y, t_mand mand)
 {
 	int	iterations;
 
-	iterations = mand.i % 255;
+	iterations = mand.i % 256;
 	/*if (mand.i >= mand.iter)
 	// (void)mand;
 		params->img.data[y * WIDTH + x] = get_color(iterations * 5, 255, 255);
@@ -45,12 +45,13 @@ void	store_img(t_params *params, int x, int y, t_mand mand)
 void	*calc_mandel(t_params *params, int y, int x)
 {
 	t_mand	mand;
-	float	tmp;
+	long double	tmp;
 	int		limit;
 
 	limit = y + HIGHT / 4;
 	mand = params->mand;
 	tmp = 0;
+	printf("mand.iter = %d\n", mand.iter);
 	while (y < limit)
 	{
 		x = 0;

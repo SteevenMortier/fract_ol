@@ -6,7 +6,7 @@
 #    By: smortier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/24 23:18:45 by smortier          #+#    #+#              #
-#    Updated: 2018/01/24 23:27:26 by smortier         ###   ########.fr        #
+#    Updated: 2018/10/09 16:03:08 by smortier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ SRC_NAME	=	main.c \
 				init_params.c \
 				thread_mandel.c \
 				mouse_holder.c \
-				get_color.c
+				get_color.c \
+				ft_julia.c \
+				thread_julia.c
 
 OBJ_NAME	=	$(SRC:.c=.o)
 SRC_PATH	=	./src
